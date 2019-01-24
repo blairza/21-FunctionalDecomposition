@@ -4,7 +4,7 @@ Hangman.
 Authors: Trey Kline and Zane Blair.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-# TODO: 2. Implement Hangman using your Iterative Enhancement Plan.
+# DONE: 2. Implement Hangman using your Iterative Enhancement Plan.
 
 ####### Do NOT attempt this assignment before class! #######
 import random
@@ -13,9 +13,9 @@ def main():
     num = int(input('Enter the minimum length of the secret word:'))
     secret_word = select_word(num)
     list = []
-    secret_list(secret_word)
     for k in range(len(secret_word)):
         list.append('_')
+    print(list)
     number_of_guesses = int(input('How many incorrect guesses will you allow yourself? '))
     guess_time(number_of_guesses,secret_word,list)
 
@@ -76,12 +76,6 @@ def check_victory(list, word):
         if again == 'No' or again=='no':
             print('See ya! \n')
             return True
-
-def secret_list(word):
-    secret_list = []
-    for k in range(len(word)):
-        secret_list.append(word[k])
-    return secret_list
 
 def game_over(word):
     print('Game over man!')
