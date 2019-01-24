@@ -81,11 +81,11 @@ def game_over(word):
     print('Game over man!')
     print('The word was:', word)
     again = input('Would you like to play again? ')
-    if again == 'yes' or again == 'Yes':
+    if again == 'yes' or again == 'Yes' or again == 'y':
         print('Playing again \n')
         main()
         return True
-    if again == 'No' or again == 'no':
+    if again == 'No' or again == 'no' or again == 'n':
         print('See ya! \n')
         return True
 main()
